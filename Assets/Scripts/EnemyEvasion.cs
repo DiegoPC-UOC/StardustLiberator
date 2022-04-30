@@ -17,7 +17,6 @@ public class EnemyEvasion : MonoBehaviour
     {
         rig = GetComponent<Rigidbody>();
     }
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Evade());
@@ -40,7 +39,6 @@ public class EnemyEvasion : MonoBehaviour
         }
 
     }
-    // Update is called once per frame
     void FixedUpdate()
     {
         float acceletare = Mathf.MoveTowards(rig.velocity.x, evadeSpeed, Time.deltaTime * smoth);

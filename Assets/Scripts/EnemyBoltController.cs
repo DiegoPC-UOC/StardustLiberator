@@ -16,12 +16,6 @@ public class EnemyBoltController : MonoBehaviour
         InvokeRepeating("Fire", fireDelay, fireRate);
     }
 
-
-    void Update()
-    {
-        
-    }
-
     void Fire()
     {
         Instantiate(shot, shotSpawn1.position, shotSpawn1.rotation);

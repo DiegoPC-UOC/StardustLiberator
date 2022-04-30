@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3361425834501123624}
   - component: {fileID: 3361425834501123627}
   - component: {fileID: 3361425834501123626}
-  - component: {fileID: 3361425834501123629}
+  - component: {fileID: -5538828200687818161}
   m_Layer: 0
   m_Name: BlackShip
   m_TagString: Enemy
@@ -148,7 +148,7 @@ MonoBehaviour:
   shotSpawn2: {fileID: 3361425834473840816}
   fireRate: 1
   fireDelay: 2
---- !u!114 &3361425834501123629
+--- !u!114 &-5538828200687818161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbfaa56e845a174683d2034f07a6ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 5
+  scoreValue: 0
+  explosion: {fileID: 8038344524183138613, guid: edfa8579fb9a81546969dc7680fbee8a, type: 3}
+  playerExplosion: {fileID: 6192724089161036641, guid: b408a2a4d972a7546a0b56b46280b9b7, type: 3}
 --- !u!1 &3361425835286863956
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3361425835286863956}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3361425834501123639}

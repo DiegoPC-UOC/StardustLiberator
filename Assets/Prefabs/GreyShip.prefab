@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 308506663647554760}
   - component: {fileID: 180309330581402053}
   - component: {fileID: 4196051204619128373}
-  - component: {fileID: 4618999006895708864}
+  - component: {fileID: -3079916272628511294}
   m_Layer: 0
   m_Name: GreyShip
   m_TagString: Enemy
@@ -290,7 +290,7 @@ MonoBehaviour:
   shotSpawn2: {fileID: 6099635818625570955}
   fireRate: 3
   fireDelay: 3
---- !u!114 &4618999006895708864
+--- !u!114 &-3079916272628511294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,7 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbfaa56e845a174683d2034f07a6ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 7
+  scoreValue: 0
+  explosion: {fileID: 8038344524183138613, guid: edfa8579fb9a81546969dc7680fbee8a, type: 3}
+  playerExplosion: {fileID: 6192724089161036641, guid: b408a2a4d972a7546a0b56b46280b9b7, type: 3}
 --- !u!1001 &714409018745384741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312138073662048, guid: 12e2965e034095b40b035c26bdecd5ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4312138073662048, guid: 12e2965e034095b40b035c26bdecd5ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -362,7 +364,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 12e2965e034095b40b035c26bdecd5ed, type: 3}
 --- !u!4 &713054088064732485 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4312138073662048, guid: 12e2965e034095b40b035c26bdecd5ed,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 4312138073662048, guid: 12e2965e034095b40b035c26bdecd5ed, type: 3}
   m_PrefabInstance: {fileID: 714409018745384741}
   m_PrefabAsset: {fileID: 0}

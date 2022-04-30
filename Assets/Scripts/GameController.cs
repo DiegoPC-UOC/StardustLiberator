@@ -5,31 +5,31 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [Header("Scoreboard")]
-    private int score;
+    public int score;
 
     [Header("EnemySpawn")]
     public GameObject[] hazards;
+    public GameObject finalBoss;
+    public GameObject canvasObject;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    public float bossScoreSpawn;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
+        canvasObject.SetActive(false);
         score = 0;
         StartCoroutine(SpawnWaves());
     }
 
-    // Update is called once per frame
     IEnumerator SpawnWaves ()
     {
         
         yield return new WaitForSeconds(startWait);
-        while (true){
+        while (score < bossScoreSpawn){
         
             for(int i=0; i<hazardCount; i++){
 
@@ -39,6 +39,13 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+        }
+
+        if (score >= bossScoreSpawn)
+        {
+            Vector3 spawnPositionBoss = new Vector3(0, 0, 260);
+            Instantiate(finalBoss, spawnPositionBoss, Quaternion.identity);
+            canvasObject.SetActive(true);
         }
     }
 
