@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     [Header("Scoreboard")]
     public int score;
+    private Text scoreText;
 
     [Header("EnemySpawn")]
     public GameObject[] hazards;
@@ -22,6 +24,7 @@ public class GameController : MonoBehaviour
     {
         canvasObject.SetActive(false);
         score = 0;
+        UpdateScore();
         StartCoroutine(SpawnWaves());
     }
 
@@ -49,9 +52,14 @@ public class GameController : MonoBehaviour
         }
     }
 
+
     public void AddScore(int value)
     {
         score += value;
+        UpdateScore();
     }
-
+    void UpdateScore()
+    {
+        scoreText.text = "Score: " + score;
+    }
 }
