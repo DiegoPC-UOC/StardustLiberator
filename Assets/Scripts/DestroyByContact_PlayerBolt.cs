@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyByContactPlayer : MonoBehaviour 
+public class DestroyByContact_PlayerBolt : MonoBehaviour 
 {
-
-    public int scoreValue;
-    public GameObject explosion;
     private GameController gameController;
-
+    public GameObject explosion;
     void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
@@ -18,16 +15,10 @@ public class DestroyByContactPlayer : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Boundary") || other.CompareTag("Player"))return;
-    
-        gameController.AddScore(scoreValue);
-        Instantiate(explosion, transform.position, transform.rotation);
 
-        if (other.CompareTag("Enemy"))
-        {
-            Instantiate(explosion, transform.position, transform.rotation);
-        }
+        Instantiate(explosion, transform.position, transform.rotation);
         
-        Destroy(other.gameObject);
         Destroy(gameObject);
+        
     }
 }

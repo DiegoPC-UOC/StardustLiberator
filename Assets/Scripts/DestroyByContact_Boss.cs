@@ -10,8 +10,6 @@ public class DestroyByContact_Boss : MonoBehaviour
     public int actHealth;
     private GameController gameController;
     public GameObject explosion;
-    public GameObject playerExplosion;
-
     void Start()
     {
         actHealth = maxHealth;
@@ -24,12 +22,6 @@ public class DestroyByContact_Boss : MonoBehaviour
         if (other.CompareTag("Boundary") || other.CompareTag("Enemy")) return;
 
         actHealth -= 1;
-        Destroy(other.gameObject);
-        
-        if (other.CompareTag("Player"))
-        {
-            Instantiate(playerExplosion, transform.position, transform.rotation);
-        }
 
         if (actHealth <= 0)
         {

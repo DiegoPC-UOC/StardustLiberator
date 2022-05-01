@@ -6,12 +6,14 @@ public class DestroyByContact : MonoBehaviour
 {
 
     public int scoreValue;
+    public int maxHealth;
+    public int actHealth;
     public GameObject explosion;
-    public GameObject playerExplosion;
     private GameController gameController;
 
     void Start()
     {
+        actHealth = maxHealth;
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
     }
@@ -20,15 +22,14 @@ public class DestroyByContact : MonoBehaviour
     {
         if (other.CompareTag("Boundary") || other.CompareTag("Enemy"))return;
         
-        gameController.AddScore(scoreValue);
-        Instantiate(explosion, transform.position, transform.rotation);
-        
-        if (other.CompareTag("Player"))
+        actHealth -= 1;
+
+        if (actHealth <= 0)
         {
-            Instantiate(playerExplosion, transform.position, transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
+            gameController.AddScore(scoreValue);
+            Destroy(gameObject);
         }
-        Destroy(other.gameObject);
-        Destroy(gameObject);
         
     }
 }

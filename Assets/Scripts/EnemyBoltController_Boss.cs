@@ -12,8 +12,7 @@ public class EnemyBoltController_Boss : MonoBehaviour
     public Transform shotSpawn5;
     public float fireRate;
     public float fireDelay;
-
-
+    private bool permiso;
     void Start()
     {
         InvokeRepeating("Fire", fireDelay, fireRate);
@@ -21,11 +20,10 @@ public class EnemyBoltController_Boss : MonoBehaviour
 
     void Fire()
     {
-
-            Instantiate(shot, shotSpawn1.position, shotSpawn2.rotation);
-            Instantiate(shot, shotSpawn2.position, shotSpawn3.rotation);      
-            Instantiate(shot, shotSpawn3.position, shotSpawn2.rotation);
-            Instantiate(shot, shotSpawn4.position, shotSpawn2.rotation);
-            Instantiate(shot, shotSpawn5.position, shotSpawn2.rotation);
+        Instantiate(shot, shotSpawn1.position, shotSpawn2.rotation);
+        Instantiate(shot, shotSpawn2.position, shotSpawn3.rotation);      
+        Instantiate(shot, shotSpawn3.position, shotSpawn2.rotation);
+        Instantiate(shot, shotSpawn4.position, shotSpawn2.rotation);
+        Instantiate(shot, shotSpawn5.position, shotSpawn2.rotation);
     }
 }

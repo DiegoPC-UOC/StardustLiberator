@@ -55,11 +55,8 @@ public class EnemyController_Boss : MonoBehaviour
             {
 
                 evadeSpeed = Random.Range(1, speedMovement) * -Mathf.Sign(transform.position.x);
-
                 yield return new WaitForSeconds(Random.Range(movementTime.x, movementTime.y));
-
                 evadeSpeed = 0;
-
                 yield return new WaitForSeconds(Random.Range(movementWait.x, movementWait.y));
             
             }
@@ -70,15 +67,11 @@ public class EnemyController_Boss : MonoBehaviour
     {
         if (!EndSpawn)
         {
-
             m_Collider.enabled = false;
-
         }
         else 
         {
-
             m_Collider.enabled = true;
-
         }
 
         float acceletare = Mathf.MoveTowards(rig.velocity.x, evadeSpeed, Time.deltaTime * smoth);

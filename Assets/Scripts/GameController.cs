@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     [Header("Scoreboard")]
     public int score;
-    private Text scoreText;
+    public Text scoreText;
 
     [Header("EnemySpawn")]
     public GameObject[] hazards;
@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        canvasObject.SetActive(false);
+        //canvasObject.SetActive(false);
         score = 0;
         UpdateScore();
         StartCoroutine(SpawnWaves());
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         {
             Vector3 spawnPositionBoss = new Vector3(0, 0, 260);
             Instantiate(finalBoss, spawnPositionBoss, Quaternion.identity);
-            canvasObject.SetActive(true);
+            //canvasObject.SetActive(true);
         }
     }
 

@@ -303,9 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbfaa56e845a174683d2034f07a6ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 0
+  scoreValue: 10
+  maxHealth: 2
+  actHealth: 0
   explosion: {fileID: 8038344524183138613, guid: edfa8579fb9a81546969dc7680fbee8a, type: 3}
-  playerExplosion: {fileID: 6192724089161036641, guid: b408a2a4d972a7546a0b56b46280b9b7, type: 3}
 --- !u!1 &4878352333164218519
 GameObject:
   m_ObjectHideFlags: 0
