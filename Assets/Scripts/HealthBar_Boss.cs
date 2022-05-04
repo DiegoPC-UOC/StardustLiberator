@@ -8,14 +8,31 @@ public class HealthBar_Boss : MonoBehaviour
     public Image hpBar;
     public float hpActual;
     public float hpMax;
+    public GameObject bossToFind;
     public DestroyByContact_Boss destroyByContact_Boss;
-    void Awake()
+    private GameController gameController;
+    void Start()
     {
-        hpMax = destroyByContact_Boss.maxHealth;
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        gameController = gameControllerObject.GetComponent<GameController>();
     }
     void FixedUpdate()
     {
-        hpActual = destroyByContact_Boss.actHealth;
-        hpBar.fillAmount = hpActual / hpMax;
+        if (gameController.bossInstance != null) 
+        {
+        
+            bossToFind = gameController.bossInstance;
+            destroyByContact_Boss = bossToFind.GetComponent<DestroyByContact_Boss>();
+
+            hpMax = destroyByContact_Boss.maxHealth;
+            hpActual = destroyByContact_Boss.actHealth;
+
+            if (hpActual == 1)
+            {
+                hpActual = 0;
+            }
+
+            hpBar.fillAmount = hpActual / hpMax;
+        }
     }
 }

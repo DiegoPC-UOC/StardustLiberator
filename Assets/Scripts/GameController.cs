@@ -20,9 +20,11 @@ public class GameController : MonoBehaviour
     public float waveWait;
     public float bossScoreSpawn;
 
+    public GameObject bossInstance;
+
     void Start()
     {
-        //canvasObject.SetActive(false);
+        canvasObject.SetActive(false);
         score = 0;
         UpdateScore();
         StartCoroutine(SpawnWaves());
@@ -47,8 +49,8 @@ public class GameController : MonoBehaviour
         if (score >= bossScoreSpawn)
         {
             Vector3 spawnPositionBoss = new Vector3(0, 0, 260);
-            Instantiate(finalBoss, spawnPositionBoss, Quaternion.identity);
-            //canvasObject.SetActive(true);
+            bossInstance = Instantiate(finalBoss, spawnPositionBoss, Quaternion.identity);
+            canvasObject.SetActive(true);
         }
     }
 
