@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -20,8 +21,19 @@ public class GameController : MonoBehaviour
     public float waveWait;
     public float bossScoreSpawn;
 
+    public Button restartButton;
+    private bool restart;
+    public Text gameOverText;
+    private bool gameOver;
+
+
     void Start()
     {
+        restart = false;
+        restartButton.gameObject.SetActive(false);
+        gameOver = false;
+        gameOverText.gameObject.SetActive(false);
+        
         //canvasObject.SetActive(false);
         score = 0;
         UpdateScore();
@@ -42,6 +54,13 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+
+            if(gameOver)
+            {
+                restartButton.gameObject.SetActive(true);
+                restart = true;
+                break;
+            }
         }
 
         if (score >= bossScoreSpawn)
@@ -61,5 +80,11 @@ public class GameController : MonoBehaviour
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
+    }
+
+    public void GameOver ()
+    {
+        gameOverText.gameObject.SetActive(true);
+        gameOver = true;
     }
 }

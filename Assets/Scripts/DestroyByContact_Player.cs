@@ -28,6 +28,10 @@ public class DestroyByContact_Player : MonoBehaviour
         if (actHealth <= 0)
         {
             Instantiate(explosion, transform.position, transform.rotation);
+            
+            // Cuando muere Player aparece funcion Game Over
+            gameController.GameOver();
+
             gameController.AddScore(scoreValue);
             Destroy(gameObject);
         }
