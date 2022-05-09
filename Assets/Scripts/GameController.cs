@@ -75,6 +75,7 @@ public class GameController : MonoBehaviour
         gameOverMenu.SetActive(true);
     }
     public void GameComplete() {
+        Time.timeScale = 0f;
         gameCompleteMenu.SetActive(true);
     }
 }
