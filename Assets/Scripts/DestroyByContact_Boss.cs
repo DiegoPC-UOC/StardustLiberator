@@ -27,6 +27,7 @@ public class DestroyByContact_Boss : MonoBehaviour
         {
             Instantiate(explosion, transform.position, transform.rotation);
             gameController.AddScore(scoreValue);
+            gameController.GameComplete();
             Destroy(gameObject);
         }
     }

@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour
 
     public GameObject bossInstance;
 
+    [SerializeField] GameObject gameOverMenu;
+    [SerializeField] GameObject gameCompleteMenu;
+
     void Start()
     {
         canvasObject.SetActive(false);
@@ -63,5 +66,15 @@ public class GameController : MonoBehaviour
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
+    }
+    public void GameOver()
+    {
+        //Parar juego
+        Time.timeScale = 0f;
+        //Mostrar ventana
+        gameOverMenu.SetActive(true);
+    }
+    public void GameComplete() {
+        gameCompleteMenu.SetActive(true);
     }
 }

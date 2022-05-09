@@ -29,6 +29,7 @@ public class DestroyByContact_Player : MonoBehaviour
         {
             Instantiate(explosion, transform.position, transform.rotation);
             gameController.AddScore(scoreValue);
+            gameController.GameOver();
             Destroy(gameObject);
         }
     }
