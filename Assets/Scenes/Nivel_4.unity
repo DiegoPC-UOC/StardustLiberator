@@ -2406,7 +2406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3deb2b72f529634589c1b5d93907c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 500
+  score: 0
   scoreText: {fileID: 1624003864}
   hazards:
   - {fileID: 7192626468292731642, guid: b5d1053dadb894346a7c7a0e2998526b, type: 3}
