@@ -10,16 +10,18 @@ public class DestroyByContact_Boss : MonoBehaviour
     public int actHealth;
     private GameController gameController;
     public GameObject explosion;
+
     void Start()
     {
         actHealth = maxHealth;
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
+       
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Boundary") || other.CompareTag("Enemy")) return;
+        if (other.CompareTag("Boundary") || other.CompareTag("Enemy") || other.CompareTag("PowerUp"))return;
 
         actHealth -= 1;
 

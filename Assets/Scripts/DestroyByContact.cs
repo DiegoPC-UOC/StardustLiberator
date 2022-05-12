@@ -10,18 +10,20 @@ public class DestroyByContact : MonoBehaviour
     public int actHealth;
     public GameObject explosion;
     private GameController gameController;
+    
 
     void Start()
     {
         actHealth = maxHealth;
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Boundary") || other.CompareTag("Enemy"))return;
-        
+        if (other.CompareTag("Boundary") || other.CompareTag("Enemy") || other.CompareTag("PowerUp"))return;
+ 
         actHealth -= 1;
 
         if (actHealth <= 0)

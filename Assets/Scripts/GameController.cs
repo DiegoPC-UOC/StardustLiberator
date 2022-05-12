@@ -20,8 +20,15 @@ public class GameController : MonoBehaviour
     public float waveWait;
     public float bossScoreSpawn;
 
-    public GameObject bossInstance;
+    [Header("PowerUpSpawn")] 
+    public GameObject[] powerUps;
+    public int powerUpsCount; 
+    public float spawnWaitPW;
+    public float startWaitPW;
+    public float waveWaitPW;
 
+    public GameObject bossInstance;
+    [Header("WindowMenu")]
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject gameCompleteMenu;
 
@@ -31,6 +38,7 @@ public class GameController : MonoBehaviour
         score = 0;
         UpdateScore();
         StartCoroutine(SpawnWaves());
+        StartCoroutine(SpawnPowerUp());
     }
 
     IEnumerator SpawnWaves ()
@@ -57,6 +65,20 @@ public class GameController : MonoBehaviour
         }
     }
 
+    IEnumerator SpawnPowerUp()
+    {
+        yield return new WaitForSeconds(startWaitPW);
+       
+            for (int i = 0; i < powerUpsCount; i++)
+            {
+                GameObject powerUp = powerUps[Random.Range(0, powerUps.Length)];
+                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+            // Instantiate(powerUp, spawnPosition, Quaternion.LookRotation()); 
+            Instantiate(powerUp, spawnPosition, Quaternion.identity);
+            yield return new WaitForSeconds(spawnWaitPW);
+            }
+            yield return new WaitForSeconds(waveWaitPW);
+    }
 
     public void AddScore(int value)
     {
@@ -74,7 +96,8 @@ public class GameController : MonoBehaviour
         //Mostrar ventana
         gameOverMenu.SetActive(true);
     }
-    public void GameComplete() {
+    public void GameComplete()
+    {
         Time.timeScale = 0f;
         gameCompleteMenu.SetActive(true);
     }

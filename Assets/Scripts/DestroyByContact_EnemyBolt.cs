@@ -6,6 +6,7 @@ public class DestroyByContact_EnemyBolt : MonoBehaviour
 {
     private GameController gameController;
     public GameObject explosion;
+
     void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
@@ -14,7 +15,7 @@ public class DestroyByContact_EnemyBolt : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Boundary") || other.CompareTag("Enemy"))return;
+        if (other.CompareTag("Boundary") || other.CompareTag("Enemy") || other.CompareTag("PowerUp")) return;
 
         Instantiate(explosion, transform.position, transform.rotation);
         

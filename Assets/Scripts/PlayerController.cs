@@ -16,9 +16,21 @@ public class PlayerController : MonoBehaviour {
     public Transform shotSpawn1;
     public float fireRate;
     private float nextFire;
+    
+    //PowerUp que nos permitirá tener activo el triple disparo
+    public bool canTripleShot = false;
+
+    //PowerUp que nos permitirá aumentar la velocidad
+    public bool canSpeedBoost = false;
+
+    //PowerUp que nos permitirá activar el escudo
+    public bool haveShield = false;
+
+    public GameObject Shield;
 
     private Rigidbody rig;
-     
+
+
     void Awake()
     {
         rig = GetComponent<Rigidbody>();
@@ -27,9 +39,75 @@ public class PlayerController : MonoBehaviour {
     void Update(){
 	    if(CrossPlatformInputManager.GetButton("Fire1") && Time.time>nextFire)
 	    {
+            //En caso de activar el powerUp se activan los tres disparos.
+            if (canTripleShot == true)
+            {
+                Instantiate(shot, transform.position + new Vector3 (0, 0, 5), Quaternion.identity);
+                Instantiate(shot, transform.position + new Vector3(2.5f, 0, -1), Quaternion.identity);
+                Instantiate(shot, transform.position + new Vector3(-3.9f, 0, -1), Quaternion.identity);
+                nextFire = Time.time + fireRate; //Para evitar disparar muy rápido
+            } 
+            else
+            {
+                Instantiate(shot, shotSpawn1.position, shotSpawn1.rotation);
+            }
             nextFire = Time.time + fireRate;
-		    Instantiate(shot, shotSpawn1.position, shotSpawn1.rotation);
-	    }
+
+        }
+
+        //Modificación de la velocidad cuando se activa el power up Speed
+        if (canSpeedBoost == true)
+        {
+            speed = 50.0f;
+        }
+        else
+        {
+            speed = 35.0f;
+        }
+
+   
+    }
+    
+    //Función Triple Shoot, con llamada a la rutina para finalizar el power up pasados unos segundos
+    public void TripleShotPowerupOn()
+    {
+        canTripleShot = true;
+        StartCoroutine(TripleShotPowerDownRoutine());
+    }
+
+    //Función Speed, con llamada a la rutina para finalizar el power up pasados unos segundos
+    public void SpeedBoostPowerUpOn()
+    {
+        canSpeedBoost = true;
+        StartCoroutine(SpeedBoostPowerDownRoutine());
+    }
+
+    //Función Shield, con llamada a la rutina para finalizar el power up pasados unos segundos
+    public void ShieldPowerUpOn()
+    {
+        haveShield = true;
+        Shield.SetActive(true);
+        StartCoroutine(ShieldPowerDownRoutine());
+    }
+
+    //Rutinas que limitan el tiempo de la duración de los PowerUps
+    public IEnumerator TripleShotPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(7.0f);
+        canTripleShot = false;
+    }
+
+    public IEnumerator SpeedBoostPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(5.0f);
+        canSpeedBoost = false;
+    }
+
+    public IEnumerator ShieldPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(10.0f);
+        Shield.SetActive(false);
+        haveShield = false;
     }
 
     void FixedUpdate()

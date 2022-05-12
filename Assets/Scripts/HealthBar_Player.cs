@@ -18,4 +18,11 @@ public class HealthBar_Player : MonoBehaviour
         vidaActual = destroyByContact_Player.actHealth;
         BarraVida.fillAmount = vidaActual / vidaMaxima;
     }
+
+    //Nuevo
+
+    public void DarVida(float vida)
+    {
+        vidaActual += vida;
+    }
 }

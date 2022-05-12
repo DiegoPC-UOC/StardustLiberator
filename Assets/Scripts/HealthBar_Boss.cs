@@ -11,16 +11,16 @@ public class HealthBar_Boss : MonoBehaviour
     public GameObject bossToFind;
     public DestroyByContact_Boss destroyByContact_Boss;
     private GameController gameController;
-    void Start()
+    void Awake()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
     }
     void FixedUpdate()
     {
-        if (gameController.bossInstance != null) 
+        if (gameController.bossInstance != null)
         {
-        
+
             bossToFind = gameController.bossInstance;
             destroyByContact_Boss = bossToFind.GetComponent<DestroyByContact_Boss>();
 
