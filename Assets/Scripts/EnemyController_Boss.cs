@@ -2,34 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController_Boss : MonoBehaviour
+public class EnemyController_Boss : EnemyController
 {
-    [Header("Movement")]
-    public float speed;
+    [Header("Spawn & SpawnMovement")]
     public float spawnTime;
-    public bool EndSpawn;
-    private Rigidbody rig;
     public float speedMovement;
-    public float smoth;
-    public float tilt;
-    public Vector2 startWait;
-    public Vector2 movementTime;
-    public Vector2 movementWait;
-    private float evadeSpeed;
-
+    [HideInInspector] public bool EndSpawn;
     Collider m_Collider;
-
-    void Awake()
+    public override void Start()
     {
-        rig = GetComponent<Rigidbody>();
-    }
-
-    void Start()
-    {
-
         m_Collider = GetComponent<Collider>();
         StartCoroutine(Mover());
-
     }
     IEnumerator Mover()
     {
@@ -63,7 +46,7 @@ public class EnemyController_Boss : MonoBehaviour
 
     }
     
-    void FixedUpdate()
+    public override void FixedUpdate()
     {
         if (!EndSpawn)
         {

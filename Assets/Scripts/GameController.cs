@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [Header("EnemySpawn")]
     public GameObject[] hazards;
     public GameObject finalBoss;
+    public GameObject bossInstance;
     public GameObject canvasObject;
     public Vector3 spawnValues;
     public int hazardCount;
@@ -27,7 +28,6 @@ public class GameController : MonoBehaviour
     public float startWaitPW;
     public float waveWaitPW;
 
-    public GameObject bossInstance;
     [Header("WindowMenu")]
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject gameCompleteMenu;
@@ -69,15 +69,20 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(startWaitPW);
        
-            for (int i = 0; i < powerUpsCount; i++)
+            while(true)
             {
+                for (int i = 0; i < powerUpsCount; i++)
+                {
                 GameObject powerUp = powerUps[Random.Range(0, powerUps.Length)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-            // Instantiate(powerUp, spawnPosition, Quaternion.LookRotation()); 
-            Instantiate(powerUp, spawnPosition, Quaternion.identity);
-            yield return new WaitForSeconds(spawnWaitPW);
+
+                //Instantiate(powerUp, spawnPosition, Quaternion.LookRotation()); 
+                
+                Instantiate(powerUp, spawnPosition, Quaternion.identity);
+                yield return new WaitForSeconds(spawnWaitPW);
+                }
+                yield return new WaitForSeconds(waveWaitPW);
             }
-            yield return new WaitForSeconds(waveWaitPW);
     }
 
     public void AddScore(int value)

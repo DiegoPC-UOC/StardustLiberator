@@ -2,50 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyByContact_Player : MonoBehaviour 
+public class DestroyByContact_Player : DestroyByContact 
 {
-
-    public int scoreValue;
-    public int maxHealth;
-    public int actHealth;
-    public GameObject explosion;
-    private GameController gameController;
     private PlayerController playerController;
-    private GameObject playerFind;
-    //Nuevo
+    private TimeControler timeControler;
+    private GameObject canvasToFind;
+    private GameObject playerToFind;
     public bool recuperarVida = false;
 
 
-    void Start()
+    public override void Start()
     {
         actHealth = maxHealth;
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
-        playerFind = GameObject.Find("PlayerShip");
-        playerController = playerFind.GetComponent<PlayerController>();
+        playerToFind = GameObject.Find("PlayerShip");
+        playerController = playerToFind.GetComponent<PlayerController>();
+        canvasToFind = GameObject.Find("Canvas");
+        timeControler = canvasToFind.GetComponent<TimeControler>();
     }
-
-    //Nuevo
-
     void Update()
     {
-        //Aqui meter que recupere vida
         if (recuperarVida == true)
         {
             actHealth = maxHealth;
         }
 
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Boundary") || other.CompareTag("Player") || other.CompareTag("PowerUp")) return;
-        if (playerController.haveShield == true) return;
-
-        actHealth -= 1;
-        Destroy(other.gameObject);
-        
-        if (actHealth <= 0)
+        if (!timeControler.GetenMarcha())
         {
             Instantiate(explosion, transform.position, transform.rotation);
             gameController.AddScore(scoreValue);
@@ -54,7 +37,22 @@ public class DestroyByContact_Player : MonoBehaviour
         }
     }
 
-   //Nuevo
+    public override void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Boundary") || other.CompareTag("Player") || other.CompareTag("PowerUp")) return;
+        if (playerController.haveShield == true) return;
+
+        actHealth -= 1;
+        Destroy(other.gameObject);
+
+        if (actHealth <= 0)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            gameController.AddScore(scoreValue);
+            Destroy(gameObject);
+            gameController.GameOver();
+        }
+    }
 
     public void RecuperarVidaPowerUp()
     {

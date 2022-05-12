@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500f5fb2ad57f8c45a1f6f2b6094242f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
   explosion: {fileID: 6192724089161036641, guid: f95cde11973338640b0edaeab9ff25b7, type: 3}
 --- !u!82 &3858405327032017411
 AudioSource:

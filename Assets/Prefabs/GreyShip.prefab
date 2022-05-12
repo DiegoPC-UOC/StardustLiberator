@@ -184,7 +184,6 @@ GameObject:
   - component: {fileID: 7435375207792815497}
   - component: {fileID: 7579371524816911809}
   - component: {fileID: 308506663647554760}
-  - component: {fileID: 180309330581402053}
   - component: {fileID: 4196051204619128373}
   - component: {fileID: -3079916272628511294}
   m_Layer: 0
@@ -255,21 +254,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &180309330581402053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590340908258355024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1961a459a86695d4c9c84e46072f42d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMovement: 0
+  speedEvasion: 0
   smoth: 0
-  tilt: 1
+  tilt: 0
   startWait: {x: 0, y: 0}
   movementTime: {x: 0, y: 0}
   movementWait: {x: 0, y: 0}
@@ -306,6 +293,7 @@ MonoBehaviour:
   maxHealth: 5
   actHealth: 0
   explosion: {fileID: 8038344524183138613, guid: edfa8579fb9a81546969dc7680fbee8a, type: 3}
+  gameController: {fileID: 0}
 --- !u!1001 &714409018745384741
 PrefabInstance:
   m_ObjectHideFlags: 0

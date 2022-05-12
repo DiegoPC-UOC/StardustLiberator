@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7192626468292731646}
   - component: {fileID: 7192626468292731645}
   - component: {fileID: 7192626468292731644}
+  - component: {fileID: 7192626468292731647}
   - component: {fileID: 7192626468292731643}
   - component: {fileID: 7192626468292731616}
-  - component: {fileID: 7192626468292731647}
   m_Layer: 0
   m_Name: BlueAsteroid
   m_TagString: Enemy
@@ -65,6 +65,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.17
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7192626468292731647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192626468292731642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e775aaf1ac3f9a4d8e950704e538cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 25
+  speedEvasion: 0
+  smoth: 0
+  tilt: 0
+  startWait: {x: 0, y: 0}
+  movementTime: {x: 0, y: 0}
+  movementWait: {x: 0, y: 0}
 --- !u!114 &7192626468292731643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,21 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 2
+  maxHealth: 0
+  actHealth: 0
   explosion: {fileID: 6192724089161036641, guid: b408a2a4d972a7546a0b56b46280b9b7, type: 3}
-  playerExplosion: {fileID: 6192724089161036641, guid: b408a2a4d972a7546a0b56b46280b9b7, type: 3}
---- !u!114 &7192626468292731647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7192626468292731642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e775aaf1ac3f9a4d8e950704e538cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 25
+  gameController: {fileID: 0}
 --- !u!1001 &7192626468175339755
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public float speed = 10;
     public int powerupID;
+    private float speed = 10;
+    private Rigidbody rig;
 
+    void Awake()
+    {
+        rig = GetComponent<Rigidbody>();
+    }
+    void Start()
+    {
+        rig.velocity = transform.forward * -speed;
+    }
     void Update()
     {
-        transform.Translate(Vector3.back*Time.deltaTime,Space.World);
+        //transform.Translate(Vector3.back*Time.deltaTime,Space.World);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Colision con:" + other.name);
-        if (other.tag == "Player")
+        //Debug.Log("Colision con:" + other.name);
+        if (other.name == "PlayerShip")
         {
             PlayerController player = other.GetComponent <PlayerController> ();
             DestroyByContact_Player playerShip = other.GetComponent<DestroyByContact_Player>();

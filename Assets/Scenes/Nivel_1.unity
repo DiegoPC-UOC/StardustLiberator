@@ -539,8 +539,6 @@ MonoBehaviour:
   hpBar: {fileID: 1730642747}
   hpActual: 0
   hpMax: 0
-  bossToFind: {fileID: 3800771274578885178, guid: de3deae75e40d204ba65f2d24febe0fe, type: 3}
-  destroyByContact_Boss: {fileID: 33979025, guid: de3deae75e40d204ba65f2d24febe0fe, type: 3}
 --- !u!114 &202822046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +554,6 @@ MonoBehaviour:
   BarraVida: {fileID: 1823953989}
   vidaActual: 0
   vidaMaxima: 0
-  destroyByContact_Player: {fileID: 1678973311}
 --- !u!114 &202822047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,17 +1855,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624003862}
   m_CullTransparentMesh: 1
---- !u!114 &1678973311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6398984569736350364, guid: 856eeb4bf6226b3488c066564f9e159e, type: 3}
-  m_PrefabInstance: {fileID: 6398984571412829155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e172f70d87876044b41be19a9268b84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1730642746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,6 +2573,7 @@ MonoBehaviour:
   - {fileID: 3646321744931372563, guid: 2ee94a5e5219da84591f4bae81a459f0, type: 3}
   - {fileID: 3361425834501123628, guid: b40a4e4e56fdfec47afa4e7f71fef556, type: 3}
   finalBoss: {fileID: 3800771274578885178, guid: de3deae75e40d204ba65f2d24febe0fe, type: 3}
+  bossInstance: {fileID: 0}
   canvasObject: {fileID: 941700479}
   spawnValues: {x: 49, y: 0, z: 200}
   hazardCount: 8
@@ -2599,11 +2586,10 @@ MonoBehaviour:
   - {fileID: 9015099953885321423, guid: 1197711ab171cc44e8171345b8107e20, type: 3}
   - {fileID: 7217709344804200088, guid: 7fb1a2122668f0742bda740a6e305ada, type: 3}
   - {fileID: 7544438941048724774, guid: 9b79b059919d9f94a8dd75ff23972609, type: 3}
-  powerUpsCount: 15
-  spawnWaitPW: 0.5
-  startWaitPW: 0.5
-  waveWaitPW: 0.5
-  bossInstance: {fileID: 0}
+  powerUpsCount: 1
+  spawnWaitPW: 1
+  startWaitPW: 2
+  waveWaitPW: 20
   gameOverMenu: {fileID: 237186694}
   gameCompleteMenu: {fileID: 1107603270}
 --- !u!4 &2100129788
@@ -2631,6 +2617,10 @@ PrefabInstance:
       propertyPath: Shield
       value: 
       objectReference: {fileID: 919132149155446097, guid: 3c37ffcb9b2db5047b607bc24b6fa485, type: 3}
+    - target: {fileID: 6398984569736350360, guid: 856eeb4bf6226b3488c066564f9e159e, type: 3}
+      propertyPath: haveShield
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6398984569736350361, guid: 856eeb4bf6226b3488c066564f9e159e, type: 3}
       propertyPath: m_Name
       value: PlayerShip

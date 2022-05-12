@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyByContact_PlayerBolt : MonoBehaviour 
+public class DestroyByContact_PlayerBolt : DestroyByContact_EnemyBolt 
 {
-    private GameController gameController;
-    public GameObject explosion;
     private PlayerController playerController;
     private GameObject playerFind;
 
-    void Start()
+    public override void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
@@ -17,13 +15,12 @@ public class DestroyByContact_PlayerBolt : MonoBehaviour
         playerController = playerFind.GetComponent<PlayerController>();
     }
 
-    void OnTriggerEnter(Collider other)
+    public override void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Boundary") || other.CompareTag("Player") || other.CompareTag("PowerUp")) return;
-        if (playerController.haveShield == true) return;
+        if (playerController.haveShield == true && other.CompareTag("Player")) return;
 
         Instantiate(explosion, transform.position, transform.rotation);
-        
         Destroy(gameObject);
         
     }

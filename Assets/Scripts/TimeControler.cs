@@ -24,13 +24,15 @@ public class TimeControler : MonoBehaviour
             restante -= Time.deltaTime;
             if(restante < 1)
             {
-                enMarcha = true;
-
-                //matar al player
+                enMarcha = false;
             }
             int tempMin = Mathf.FloorToInt(restante / 60);
             int tempSeg = Mathf.FloorToInt(restante % 60);
             tiempo.text=string.Format("{00:00}:{01:00}", tempMin, tempSeg);
         }
+    }
+    public bool GetenMarcha()
+    {
+        return enMarcha;
     }
 }

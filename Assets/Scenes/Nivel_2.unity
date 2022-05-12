@@ -2573,7 +2573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3deb2b72f529634589c1b5d93907c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 500
+  score: 0
   scoreText: {fileID: 1624003864}
   hazards:
   - {fileID: 7192626468292731642, guid: b5d1053dadb894346a7c7a0e2998526b, type: 3}
@@ -2586,14 +2586,19 @@ MonoBehaviour:
   - {fileID: 3646321744931372563, guid: 2ee94a5e5219da84591f4bae81a459f0, type: 3}
   - {fileID: 3646321744931372563, guid: 2ee94a5e5219da84591f4bae81a459f0, type: 3}
   - {fileID: 3361425834501123628, guid: b40a4e4e56fdfec47afa4e7f71fef556, type: 3}
-  finalBoss: {fileID: 3800771274578885178, guid: de3deae75e40d204ba65f2d24febe0fe, type: 3}
+  finalBoss: {fileID: 3800771274578885178, guid: 27705dc6af2c8074eae7dfc7806b2a29, type: 3}
   canvasObject: {fileID: 941700479}
   spawnValues: {x: 49, y: 0, z: 200}
   hazardCount: 8
   spawnWait: 1
   startWait: 2
   waveWait: 6
-  bossScoreSpawn: 150
+  bossScoreSpawn: 200
+  powerUps: []
+  powerUpsCount: 0
+  spawnWaitPW: 0
+  startWaitPW: 0
+  waveWaitPW: 0
   bossInstance: {fileID: 0}
   gameOverMenu: {fileID: 237186694}
   gameCompleteMenu: {fileID: 1107603270}

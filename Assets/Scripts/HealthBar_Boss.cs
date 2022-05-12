@@ -8,8 +8,8 @@ public class HealthBar_Boss : MonoBehaviour
     public Image hpBar;
     public float hpActual;
     public float hpMax;
-    public GameObject bossToFind;
-    public DestroyByContact_Boss destroyByContact_Boss;
+    private GameObject bossToFind;
+    private DestroyByContact_Boss destroyByContact_Boss;
     private GameController gameController;
     void Awake()
     {

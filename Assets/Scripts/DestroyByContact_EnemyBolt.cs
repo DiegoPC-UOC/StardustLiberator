@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class DestroyByContact_EnemyBolt : MonoBehaviour 
 {
-    private GameController gameController;
     public GameObject explosion;
-
-    void Start()
+    [HideInInspector] public GameController gameController;
+    public virtual void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
     }
 
-    void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Boundary") || other.CompareTag("Enemy") || other.CompareTag("PowerUp")) return;
 
         Instantiate(explosion, transform.position, transform.rotation);
-        
         Destroy(gameObject);
         
     }
