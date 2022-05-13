@@ -33,6 +33,7 @@ public class DestroyByContact_Player : DestroyByContact
             Instantiate(explosion, transform.position, transform.rotation);
             gameController.AddScore(scoreValue);
             Destroy(gameObject);
+            StartCoroutine(Waiter());
             gameController.GameOver();
         }
     }
@@ -50,6 +51,7 @@ public class DestroyByContact_Player : DestroyByContact
             Instantiate(explosion, transform.position, transform.rotation);
             gameController.AddScore(scoreValue);
             Destroy(gameObject);
+            StartCoroutine(Waiter());
             gameController.GameOver();
         }
     }
@@ -64,5 +66,9 @@ public class DestroyByContact_Player : DestroyByContact
     {
         yield return new WaitForSeconds(1.0f);
         recuperarVida = false;
+    }
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(5f);
     }
 }

@@ -96,14 +96,15 @@ public class GameController : MonoBehaviour
     }
     public void GameOver()
     {
-        //Parar juego
-        Time.timeScale = 0f;
         //Mostrar ventana
         gameOverMenu.SetActive(true);
+        //Parar juego
+        Time.timeScale = 0f;
     }
     public void GameComplete()
     {
-        Time.timeScale = 0f;
         gameCompleteMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
+    
 }
