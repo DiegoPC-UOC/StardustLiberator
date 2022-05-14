@@ -1642,6 +1642,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 868439424, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291311508322982904, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994898067262025589, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099246481543903910, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4840681109210383424, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1689,6 +1705,26 @@ PrefabInstance:
     - target: {fileID: 4840681109210383425, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
       propertyPath: m_Name
       value: nivelRojo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840681109210383425, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840681109716842337, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423662369373706361, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765806577305383619, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117101361064944921, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5fd1d10aa2e18a4fb9f52dbc98e2034, type: 3}
@@ -2373,7 +2409,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -2580,11 +2616,15 @@ MonoBehaviour:
   startWait: 2
   waveWait: 6
   bossScoreSpawn: 250
-  powerUps: []
-  powerUpsCount: 0
-  spawnWaitPW: 0
-  startWaitPW: 0
-  waveWaitPW: 0
+  powerUps:
+  - {fileID: 9015099953885321423, guid: 1197711ab171cc44e8171345b8107e20, type: 3}
+  - {fileID: 7544438941048724774, guid: 9b79b059919d9f94a8dd75ff23972609, type: 3}
+  - {fileID: 7217709344804200088, guid: 7fb1a2122668f0742bda740a6e305ada, type: 3}
+  - {fileID: 4105871843098795680, guid: 158d672e4e93c4248ab370f1c280294d, type: 3}
+  powerUpsCount: 1
+  spawnWaitPW: 1
+  startWaitPW: 2
+  waveWaitPW: 20
   gameOverMenu: {fileID: 237186694}
   gameCompleteMenu: {fileID: 1107603270}
 --- !u!4 &2100129788

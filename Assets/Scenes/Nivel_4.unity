@@ -600,6 +600,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 868439424, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291311508322982904, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994898067262025589, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099246481543903910, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4840681109210383424, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -647,6 +663,26 @@ PrefabInstance:
     - target: {fileID: 4840681109210383425, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
       propertyPath: m_Name
       value: nivelAmarillo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840681109210383425, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840681109716842337, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423662369373706361, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765806577305383619, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117101361064944921, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535153ad15c98b84590eed166dd8d0ad, type: 3}
@@ -2211,7 +2247,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
