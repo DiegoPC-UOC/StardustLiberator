@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [Header("Scoreboard")]
-    public int score;
-    public Text scoreText;
+    //[Header("Scoreboard")]
+    //public int score;
+    //public Text scoreText;
 
     [Header("EnemySpawn")]
     public GameObject[] hazards;
@@ -32,11 +32,14 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject gameCompleteMenu;
 
+    Score sc;
+
     void Start()
     {
+        sc = this.GetComponent<Score>();
         canvasObject.SetActive(false);
-        score = 0;
-        UpdateScore();
+        //score.score = 0;
+        //UpdateScore();
         StartCoroutine(SpawnWaves());
         StartCoroutine(SpawnPowerUp());
     }
@@ -45,7 +48,7 @@ public class GameController : MonoBehaviour
     {
         
         yield return new WaitForSeconds(startWait);
-        while (score < bossScoreSpawn){
+        while (sc.score < bossScoreSpawn){
         
             for(int i=0; i<hazardCount; i++){
 
@@ -57,7 +60,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(waveWait);
         }
 
-        if (score >= bossScoreSpawn)
+        if (sc.score >= bossScoreSpawn)
         {
             Vector3 spawnPositionBoss = new Vector3(0, 0, 260);
             bossInstance = Instantiate(finalBoss, spawnPositionBoss, Quaternion.identity);
@@ -85,15 +88,15 @@ public class GameController : MonoBehaviour
             }
     }
 
-    public void AddScore(int value)
-    {
-        score += value;
-        UpdateScore();
-    }
-    void UpdateScore()
-    {
-        scoreText.text = "Score: " + score;
-    }
+    //public void AddScore(int value)
+    //{
+    //    score += value;
+    //    UpdateScore();
+    //}
+    //void UpdateScore()
+    //{
+    //    scoreText.text = "Score: " + score;
+    //}
     public void GameOver()
     {
         //Mostrar ventana

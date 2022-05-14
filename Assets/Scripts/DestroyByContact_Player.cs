@@ -10,7 +10,6 @@ public class DestroyByContact_Player : DestroyByContact
     private GameObject playerToFind;
     public bool recuperarVida = false;
 
-
     public override void Start()
     {
         actHealth = maxHealth;
@@ -31,9 +30,7 @@ public class DestroyByContact_Player : DestroyByContact
         if (!timeControler.GetenMarcha())
         {
             Instantiate(explosion, transform.position, transform.rotation);
-            gameController.AddScore(scoreValue);
             Destroy(gameObject);
-            StartCoroutine(Waiter());
             gameController.GameOver();
         }
     }
@@ -49,9 +46,7 @@ public class DestroyByContact_Player : DestroyByContact
         if (actHealth <= 0)
         {
             Instantiate(explosion, transform.position, transform.rotation);
-            gameController.AddScore(scoreValue);
             Destroy(gameObject);
-            StartCoroutine(Waiter());
             gameController.GameOver();
         }
     }
@@ -67,8 +62,5 @@ public class DestroyByContact_Player : DestroyByContact
         yield return new WaitForSeconds(1.0f);
         recuperarVida = false;
     }
-    IEnumerator Waiter()
-    {
-        yield return new WaitForSeconds(5f);
-    }
+    
 }
