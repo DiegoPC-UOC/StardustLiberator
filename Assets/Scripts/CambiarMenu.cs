@@ -50,6 +50,9 @@ public class CambiarMenu : MonoBehaviour
     /// </summary>
     public void MenuSeleccionFase()
     {
+        juegoNormal = 0;
+        PlayerPrefs.SetInt("juegoNormal", juegoNormal);
+        PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene("SeleccionFase");
     }
 }

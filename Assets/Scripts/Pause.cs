@@ -34,7 +34,7 @@ public class Pause : MonoBehaviour
                 actualScore = sc.getScore();
                 expectedScore = PlayerPrefs.GetInt("score", 0) + actualScore;
                 PlayerPrefs.SetInt("score", expectedScore);
-                Debug.Log(PlayerPrefs.GetInt("score", 0));
+                Debug.Log(PlayerPrefs.GetInt("score"));
             }
         }
         else
