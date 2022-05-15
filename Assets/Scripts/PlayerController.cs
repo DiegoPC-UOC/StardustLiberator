@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-
-
-
 public class PlayerController : MonoBehaviour {
 
     public float speed;

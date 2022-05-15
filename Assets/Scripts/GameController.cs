@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour
     [Header("WindowMenu")]
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject gameCompleteMenu;
+    [SerializeField] TextMeshProUGUI finalScore;
 
     Score sc;
 
@@ -107,6 +109,7 @@ public class GameController : MonoBehaviour
     public void GameComplete()
     {
         gameCompleteMenu.SetActive(true);
+        finalScore.text = sc.getScore().ToString();
         Time.timeScale = 0f;
     }
     
