@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 868439427}
   - component: {fileID: 868439426}
   - component: {fileID: 6212081396335299728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StarsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8468444375418620635}
   - component: {fileID: 5888273848945614027}
   - component: {fileID: 1753481837806531123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigStarsBackground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 49459401032745289}
   - component: {fileID: 322755511164726288}
   - component: {fileID: 1562680073561476298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StarsBackground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 7141776519108874615}
   - component: {fileID: 3444390977288264065}
   - component: {fileID: 4194586745521596979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4840681109210383424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nivelAmarillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 4840681109716842341}
   - component: {fileID: 4840681109716842338}
   - component: {fileID: 8403890602225941351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpaceBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 5989820100031726632}
   - component: {fileID: 7915770544104062631}
   - component: {fileID: 4940009733407543646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigStarsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 3204753220301186506}
   - component: {fileID: 8214654735780379548}
   - component: {fileID: 7359594619688474731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 202208559233914702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

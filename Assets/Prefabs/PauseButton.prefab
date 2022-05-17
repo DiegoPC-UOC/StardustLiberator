@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  finalScore: 
 --- !u!114 &3577784743341066906
 MonoBehaviour:
   m_ObjectHideFlags: 0

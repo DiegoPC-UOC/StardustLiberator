@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 868439427}
   - component: {fileID: 868439426}
   - component: {fileID: 6201644536227986606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StarsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 265875429214367958}
   - component: {fileID: 8566763159521140670}
   - component: {fileID: 8195654104155194397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 9036994336308127077}
   - component: {fileID: 3832604284888614239}
   - component: {fileID: 3919457209380014580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 901613513616651984}
   - component: {fileID: 8971174560536078048}
   - component: {fileID: 6320050638579319234}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 8468444375418620635}
   - component: {fileID: 5888273848945614027}
   - component: {fileID: 1753481837806531123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigStarsBackground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 3689572439030038118}
   - component: {fileID: 4343377268225557802}
   - component: {fileID: 5979877793940740316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 49459401032745289}
   - component: {fileID: 322755511164726288}
   - component: {fileID: 1562680073561476298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StarsBackground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 7141776519108874615}
   - component: {fileID: 3444390977288264065}
   - component: {fileID: 4194586745521596979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3103754778003690905}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroids (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 1058256095057104474}
   - component: {fileID: 3694228711945542589}
   - component: {fileID: 4412975638460282773}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 2617875225134025681}
   - component: {fileID: 479012540915902542}
   - component: {fileID: 4041524693898499035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8512075218234805263}
   - component: {fileID: 6898366652226822540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroupAsteroids1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,7 +1030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4840681109210383424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nivelMorado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 4840681109716842341}
   - component: {fileID: 4840681109716842338}
   - component: {fileID: 6930663285573028464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpaceBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 8438197587481628129}
   - component: {fileID: 2330581707594073070}
   - component: {fileID: 3992550690412558650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,7 +1254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8485411684952717667}
   - component: {fileID: 371521098499042562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroupAsteroids2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5915618389474283703}
   - component: {fileID: 5357566424544486973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroupAsteroids3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1350,7 +1350,7 @@ GameObject:
   - component: {fileID: 405495222085836425}
   - component: {fileID: 3840575490525370436}
   - component: {fileID: 8406526898301213862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1443,7 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3371178448726334584}
   - component: {fileID: 8393968902120610750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroupAsteroids1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1491,7 @@ GameObject:
   - component: {fileID: 5989820100031726632}
   - component: {fileID: 7915770544104062631}
   - component: {fileID: 5802105166909166849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigStarsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,7 +1585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380571689253317694}
   - component: {fileID: 5411895235661292536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroupAsteroids2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1633,7 +1633,7 @@ GameObject:
   - component: {fileID: 3204753220301186506}
   - component: {fileID: 8214654735780379548}
   - component: {fileID: 7359594619688474731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +1715,7 @@ GameObject:
   - component: {fileID: 6126201247287150954}
   - component: {fileID: 9089106753565502629}
   - component: {fileID: 6559521930101069859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3447392897402964961}
   - component: {fileID: 6277288910814363758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroupAsteroids3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   - component: {fileID: 6407166065220501853}
   - component: {fileID: 1449271056190791679}
   - component: {fileID: 6483442911028219825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 4153860928926070583}
   - component: {fileID: 7340224783618657094}
   - component: {fileID: 9077239618065198929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 9221261685186309669}
   - component: {fileID: 7395211119164303107}
   - component: {fileID: 8036929272434516293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2142,7 +2142,7 @@ GameObject:
   - component: {fileID: 2247304209494316996}
   - component: {fileID: 322521232749057311}
   - component: {fileID: 2959558356381977716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2237,7 +2237,7 @@ GameObject:
   - component: {fileID: 2721140846773435869}
   - component: {fileID: 2991200584876796862}
   - component: {fileID: 5116372573523004951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2329,7 +2329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6658955120926099149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroids
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,7 +2365,7 @@ GameObject:
   - component: {fileID: 5270631250169027241}
   - component: {fileID: 1000987562087081142}
   - component: {fileID: 4599592242556644615}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,7 +2460,7 @@ GameObject:
   - component: {fileID: 2341904706296128041}
   - component: {fileID: 1311548850610504979}
   - component: {fileID: 3636962109177294920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2552,7 +2552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2313384906536865320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Backgruound
   m_TagString: Untagged
   m_Icon: {fileID: 0}

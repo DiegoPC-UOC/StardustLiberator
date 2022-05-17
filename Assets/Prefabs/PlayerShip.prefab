@@ -143,10 +143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 35
   tilt: 0.3
-  xMin: -49
-  xMax: 49
-  zMin: -10
-  zMax: 75
+  xMin: -50
+  xMax: 50
+  zMin: -15
+  zMax: 80
   shot: {fileID: 8261899252473796045, guid: f5f130044a30f9e4cbaec338823ee45d, type: 3}
   shotSpawn1: {fileID: 6398984569894433327}
   fireRate: 0.5
